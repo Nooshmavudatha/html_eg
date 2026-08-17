@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f2f6fc;
+        }
+
+        /* Header */
+        header {
+            background-color: #263238;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 50px;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 17px;
+        }
+
+        nav a:hover {
+            color: #64b5f6;
+        }
+
+        /* Main Section */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px 40px;
+            gap: 25px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            flex: 1;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+            min-height: 200px;
+        }
+
+        .card h2 {
+            color: #263238;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .card ul {
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #263238;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #64b5f6;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Nooshma V.</div>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <div class="card" id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! I am a student interested in programming and
+                web development. I enjoy learning new technologies
+                and creating useful projects.
+            </p>
+        </div>
+
+        <div class="card" id="projects">
+            <h2>Projects</h2>
+            <p>My recent projects include:</p>
+            <ul>
+                <li>Smart Attendance System</li>
+                <li>Personal Expense Manager</li>
+                <li>Smart Road Safety System</li>
+            </ul>
+        </div>
+
+        <div class="card" id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Git & GitHub</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <footer id="contact">
+        Contact: nooshma@example.com |
+        <a href="#">LinkedIn</a>
+    </footer>
+
+</body>
+</html>
