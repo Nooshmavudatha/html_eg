@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Blog Photo Gallery</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+}
+
+h1 {
+    text-align: center;
+    color: #4a235a;
+    margin: 30px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 30px;
+}
+
+.photo {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.photo:hover {
+    transform: scale(1.05);
+}
+
+.photo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.photo p {
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    font-weight: bold;
+    color: #4a235a;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1>✈️ My Travel Blog</h1>
+
+<div class="gallery">
+
+    <div class="photo">
+        <img src="travel1.jpg" alt="Beach">
+        <p>Beautiful Beach</p>
+    </div>
+
+    <div class="photo">
+        <img src="travel2.jpg" alt="Mountains">
+        <p>Mountain Adventure</p>
+    </div>
+
+    <div class="photo">
+        <img src="travel3.jpg" alt="Paris">
+        <p>Paris Trip</p>
+    </div>
+
+    <div class="photo">
+        <img src="travel4.jpg" alt="City">
+        <p>City Exploration</p>
+    </div>
+
+    <div class="photo">
+        <img src="travel5.jpg" alt="Travel">
+        <p>Travel Memories</p>
+    </div>
+
+    <div class="photo">
+        <img src="travel6.jpg" alt="Nature">
+        <p>Nature Escape</p>
+    </div>
+
+    <div class="photo">
+        <img src="travel7.jpg" alt="Italy">
+        <p>Italy Journey</p>
+    </div>
+
+    <div class="photo">
+        <img src="travel8.jpg" alt="Road Trip">
+        <p>Road Trip</p>
+    </div>
+
+</div>
+
+</body>
+</html>

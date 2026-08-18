@@ -1,160 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nooshma Vudatha - Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-        body {
-            background-color: #f2f6fc;
-        }
+body {
+    line-height: 1.6;
+    background: linear-gradient(135deg, #fff1eb, #f3e8ff);
+    color: #333;
+}
 
-        /* Header */
-        header {
-            background-color: #263238;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 30px 50px;
-        }
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    background: linear-gradient(135deg, #ff6b6b, #845ec2);
+    color: white;
+}
 
-        .logo {
-            font-size: 30px;
-            font-weight: bold;
-        }
+.header h1 {
+    font-size: 28px;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 17px;
-        }
+.nav a {
+    margin: 0 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        nav a:hover {
-            color: #64b5f6;
-        }
+.nav a:hover {
+    color: #ffe66d;
+}
 
-        /* Main Section */
-        .container {
-            display: flex;
-            justify-content: space-between;
-            padding: 50px 40px;
-            gap: 25px;
-        }
+/* Main */
+.main {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    padding: 50px 30px;
+    gap: 25px;
+}
 
-        .card {
-            background-color: white;
-            border-radius: 10px;
-            padding: 25px;
-            flex: 1;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-            min-height: 200px;
-        }
+/* Blocks */
+.section {
+    flex: 1;
+    padding: 30px;
+    border-radius: 20px;
+    color: #333;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
 
-        .card h2 {
-            color: #263238;
-            margin-bottom: 15px;
-        }
+/* Different block colors */
+.intro {
+    background-color: #ffd6e0;
+}
 
-        .card p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #444;
-        }
+.projects {
+    background-color: #d6f5ff;
+}
 
-        .card ul {
-            padding-left: 20px;
-            line-height: 1.8;
-        }
+.skills {
+    background-color: #fff0b3;
+}
 
-        /* Footer */
-        footer {
-            background-color: #263238;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            font-size: 16px;
-        }
+.section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
 
-        footer a {
-            color: #64b5f6;
-            text-decoration: none;
-        }
+.section h2 {
+    margin-bottom: 15px;
+    color: #5b2c6f;
+    border-bottom: 2px solid #845ec2;
+    padding-bottom: 8px;
+}
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 20px;
-            }
+.section p {
+    margin: 8px 0;
+}
 
-            .container {
-                flex-direction: column;
-            }
-        }
-    </style>
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #4a235a;
+    color: white;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 25px;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        <div class="logo">Nooshma V.</div>
+<header class="header">
+    <h1>Nooshma Vudatha</h1>
 
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <main class="container">
+<main class="main">
 
-        <div class="card" id="about">
-            <h2>About Me</h2>
-            <p>
-                Hello! I am a student interested in programming and
-                web development. I enjoy learning new technologies
-                and creating useful projects.
-            </p>
-        </div>
+    <section id="about" class="section intro">
+        <h2>About Me</h2>
+        <p>
+            I am a Computer Science and Engineering student at KL University.
+            I am interested in programming, web development and technology.
+        </p>
+    </section>
 
-        <div class="card" id="projects">
-            <h2>Projects</h2>
-            <p>My recent projects include:</p>
-            <ul>
-                <li>Smart Attendance System</li>
-                <li>Personal Expense Manager</li>
-                <li>Smart Road Safety System</li>
-            </ul>
-        </div>
+    <section id="projects" class="section projects">
+        <h2>Projects</h2>
+        <p>• Smart Attendance System</p>
+        <p>• Smart Task Scheduler</p>
+        <p>• Smart Road Safety Barrier</p>
+        <p>• Personal Portfolio Website</p>
+    </section>
 
-        <div class="card" id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML & CSS</li>
-                <li>Java</li>
-                <li>Python</li>
-                <li>JavaScript</li>
-                <li>Git & GitHub</li>
-            </ul>
-        </div>
+    <section id="skills" class="section skills">
+        <h2>Skills</h2>
+        <p>HTML, CSS, Java, Python, C, JavaScript</p>
+        <p>Git & GitHub, Arduino, IoT</p>
+    </section>
 
-    </main>
+</main>
 
-    <footer id="contact">
-        Contact: nooshma@example.com |
-        <a href="#">LinkedIn</a>
-    </footer>
+<footer class="footer" id="contact">
+    <p>Contact: Nooshma Vudatha | KL University</p>
+</footer>
 
 </body>
 </html>

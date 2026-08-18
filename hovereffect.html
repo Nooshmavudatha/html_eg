@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Card Hover Effect</title>
+
+<style>
+/* Reset & Center Container */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f6f9;
+    font-family: Arial, sans-serif;
+}
+
+/* Product Card */
+.product-card {
+    position: relative;
+    width: 300px;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* Image Styling */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.75); /* Darkens image so buttons pop */
+}
+
+/* Hover Overlay Buttons */
+.button-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.product-card:hover .button-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Button Styling */
+.btn {
+    width: 70%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-buy {
+    background-color: #27ae60;
+    color: #ffffff;
+}
+
+.btn-buy:hover {
+    background-color: #219150;
+    transform: scale(1.03);
+}
+
+.btn-cart {
+    background-color: #ffffff;
+    color: #2c3e50;
+}
+
+.btn-cart:hover {
+    background-color: #e2e8f0;
+    transform: scale(1.03);
+}
+
+/* Product Info below image */
+.product-info {
+    padding: 18px;
+    text-align: center;
+}
+
+.product-title {
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: #2c3e50;
+}
+
+.product-price {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+</style>
+</head>
+
+<body>
+
+<div class="product-card">
+    <div class="image-container">
+        <img src="samsung.jpg" alt="Product Image">
+        
+        <!-- Overlay Buttons -->
+        <div class="button-overlay">
+            <button class="btn btn-buy">Buy Now</button>
+            <button class="btn btn-cart">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="product-info">
+        <h3 class="product-title">Classic Machine</h3>
+        <p class="product-price">1,30,000</p>
+    </div>
+</div>
+
+</body>
+</html>
